@@ -1,6 +1,11 @@
 ## Interface: 50400
 
-## OptionalDependencies: LibDataBroker-1.1
+## Notes: Shows time. Click to open the calendar.
+
+## Author: Phanx
+## X-Email: addons@phanx.net
+## X-Copyright: Copyright (c) 2014 Phanx. All rights reserved.
+## X-License: See the accompanying LICENSE file for details.
 
 Libs\LibStub\LibStub.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
