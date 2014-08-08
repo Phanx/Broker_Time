@@ -1,5 +1,11 @@
--- // Broker Time
--- // A really simple clock for your Broker display.
+--[[--------------------------------------------------------------------
+	Broker_Time
+	Shows time. Click to open the calendar.
+	Copyright (c) 2014 Phanx. All rights reserved.
+	See the accompanying README and LICENSE files for more information.
+	http://www.wowinterface.com/downloads/info-BrokerTime.html
+	http://www.curse.com/addons/wow/broker-saved
+----------------------------------------------------------------------]]
 
 local Clock = LibStub("LibDataBroker-1.1"):NewDataObject("Time", {
 	type  = "data object",
