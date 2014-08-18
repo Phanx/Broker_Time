@@ -1,6 +1,20 @@
 ## Interface: 50400
 
-## Notes: Shows time. Click to open the calendar.
+## Title: Broker: Time
+## Notes: Shows the time. Click to open the calendar.
+## Title-deDE: Broker: Zeit
+## Notes-deDE: Zeigt die Zeit. Klick, um den Kalender zu öffnen.
+## Title-esES: Broker: Hora
+## Notes-esES: Muestra la hora. Clic para abrir el calendario.
+## Title-esMX: Broker: Hora
+## Notes-esMX: Muestra la hora. Clic para abrir el calendario.
+## Title-frFR: Broker: Heure
+## Title-itIT: Broker: Ora
+## Title-ptBR: Broker: Hora
+## Title-ruRU: Broker: Время
+## Title-koKR: Broker: 시간
+## Title-zhCN: Broker: 时间
+## Title-zhTW: Broker: 時候
 
 ## Author: Phanx
 ## X-Email: addons@phanx.net
