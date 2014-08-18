@@ -4,23 +4,25 @@
 	Copyright (c) 2014 Phanx. All rights reserved.
 	See the accompanying README and LICENSE files for more information.
 	http://www.wowinterface.com/downloads/info-BrokerTime.html
-	http://www.curse.com/addons/wow/broker-saved
+	http://www.curse.com/addons/wow/broker-time
 ----------------------------------------------------------------------]]
 
-local Clock = LibStub("LibDataBroker-1.1"):NewDataObject("Time", {
+local TIME = GetLocale() == "deDE"  and "Zeit"
+	or GetLocale():match("^es") and "Hora"
+	or GetLocale() == "frFR"    and "Heure"
+	or GetLocale() == "itIT"    and "Ora"
+	or GetLocale():match("^pt") and "Hora"
+	or GetLocale() == "ruRU"    and "Время"
+	or GetLocale() == "koKR"    and "시간"
+	or GetLocale() == "zhCN"    and "时间"
+	or GetLocale() == "zhTW"    and "時候"
+	or "Time"
+
+local Clock = LibStub("LibDataBroker-1.1"):NewDataObject(TIME, {
 	type  = "data object",
 	icon  = "Interface\\TimeManager\\GlobeIcon",
 	text  = "--:--",
-	label = GetLocale() == "deDE"  and "Zeit" 
-		or GetLocale():match("^es") and "Hora" 
-		or GetLocale() == "frFR"    and "Heure" 
-		or GetLocale() == "itIT"    and "Ora" 
-		or GetLocale():match("^pt") and "Hora" 
-		or GetLocale() == "ruRU"    and "Время" 
-		or GetLocale() == "koKR"    and "시간" 
-		or GetLocale() == "zhCN"    and "时间" 
-		or GetLocale() == "zhTW"    and "時候" 
-		or "Time",
+	label = TIME,
 })
 
 local function GetTooltipPoint(self, offset)
