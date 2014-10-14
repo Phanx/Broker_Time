@@ -19,10 +19,9 @@ local TIME = GetLocale() == "deDE"  and "Zeit"
 	or "Time"
 
 local Clock = LibStub("LibDataBroker-1.1"):NewDataObject(TIME, {
-	type  = "data object",
+	type  = "data source",
 	icon  = "Interface\\TimeManager\\GlobeIcon",
 	text  = "--:--",
-	label = TIME,
 })
 
 local function GetTooltipPoint(self, offset)
