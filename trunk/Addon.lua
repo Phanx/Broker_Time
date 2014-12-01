@@ -7,21 +7,41 @@
 	http://www.curse.com/addons/wow/broker-time
 ----------------------------------------------------------------------]]
 
-local TIME = GetLocale() == "deDE"  and "Zeit"
-	or GetLocale():match("^es") and "Hora"
-	or GetLocale() == "frFR"    and "Heure"
-	or GetLocale() == "itIT"    and "Ora"
-	or GetLocale():match("^pt") and "Hora"
-	or GetLocale() == "ruRU"    and "Время"
-	or GetLocale() == "koKR"    and "시간"
-	or GetLocale() == "zhCN"    and "时间"
-	or GetLocale() == "zhTW"    and "時候"
-	or "Time"
+local TIME, DATEF, RIGHT_CLICK_CALENDAR = "Time", "%A, %B %d, %Y", "Right-Click to toggle the calendar."
+if GetLocale() == "deDE" then
+	TIME = "Zeit"
+	DATEF = "%A, %d. %B %Y"
+elseif GetLocale():match("^es") then
+	TIME = "Hora"
+	DATEF = "%A, %d de %B de %Y"
+elseif GetLocale() == "frFR" then
+	TIME = "Heure"
+	DATEF = "%A %d %B %Y"
+elseif GetLocale() == "itIT" then
+	TIME = "Ora"
+	DATEF = "%A %d %B %Y"
+elseif GetLocale() == "ptBR" then
+	TIME = "Hora"
+	DATEF = "%d de %B de %Y"
+elseif GetLocale() == "ruRU" then
+	TIME = "Время"
+	DATEF = "%A, %d %B %Y"
+elseif GetLocale() == "koKR" then
+	TIME = "시간"
+	DATEF = "%A %Y년 %m월 %d일"
+elseif GetLocale() == "zhCN" then
+	TIME = "时间"
+	DATEF = "%A%Y年%m月%d日"
+elseif GetLocale() == "zhTW" then
+	TIME = "時候"
+	DATEF = "%A%Y年%m月%d日"
+end
 
 local Clock = LibStub("LibDataBroker-1.1"):NewDataObject(TIME, {
 	type  = "data source",
 	icon  = "Interface\\TimeManager\\GlobeIcon",
 	text  = "--:--",
+	label = TIME,
 })
 
 local function GetTooltipPoint(self, offset)
@@ -39,17 +59,27 @@ function Clock:OnClick(button)
 	else
 		ToggleTimeManager()
 		if TimeManagerFrame:IsShown() then
-			TimeManagerFrame:SetClampedToScreen()
+			TimeManagerFrame:SetClampedToScreen(true)
 			TimeManagerFrame:ClearAllPoints()
 			TimeManagerFrame:SetPoint(GetTooltipPoint(self))
 		end
 	end
 end
 
+local function CleanDate(...)
+	local text = date(...)
+	text = gsub(text, "^0", "")
+	text = gsub(text, "([^:%d])0", "%1")
+	return text
+end
+
 function Clock:OnEnter()
 	GameTooltip:SetOwner(self, "ANCHOR_NONE")
 	GameTooltip:SetPoint(GetTooltipPoint(self))
 	TimeManagerClockButton_UpdateTooltip()
+	GameTooltipTextLeft1:SetText(CleanDate(DATEF))
+	GameTooltip:AddLine(RIGHT_CLICK_CALENDAR)
+	GameTooltip:Show()
 end
 
 function Clock:OnLeave()
