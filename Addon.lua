@@ -1,19 +1,19 @@
 --[[--------------------------------------------------------------------
 	Broker_Time
-	Shows time. Click to open the calendar.
-	Copyright (c) 2014 Phanx. All rights reserved.
-	See the accompanying README and LICENSE files for more information.
-	http://www.wowinterface.com/downloads/info-BrokerTime.html
-	http://www.curse.com/addons/wow/broker-time
+	Shows the time. Hover for the date. Click to open the calendar.
+	Copyright (c) 2014 Phanx <addons@phanx.net>. All rights reserved.
+	https://github.com/Phanx/Broker_Time
 ----------------------------------------------------------------------]]
 
 local TIME, DATEF, RIGHT_CLICK_CALENDAR = "Time", "%A, %B %d, %Y", "Right-Click to toggle the calendar."
 if GetLocale() == "deDE" then
 	TIME = "Zeit"
 	DATEF = "%A, %d. %B %Y"
+	RIGHT_CLICK_CALENDAR = "Rechtsklick, um den Kalender anzuzeigen."
 elseif GetLocale():match("^es") then
 	TIME = "Hora"
 	DATEF = "%A, %d de %B de %Y"
+	RIGHT_CLICK_CALENDAR = "Clic derecho para mostrar el calendario."
 elseif GetLocale() == "frFR" then
 	TIME = "Heure"
 	DATEF = "%A %d %B %Y"

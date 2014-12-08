@@ -1,13 +1,13 @@
 ## Interface: 60000
 
 ## Title: Broker: Time
-## Notes: Shows the time. Click to open the calendar.
+## Notes: Just shows the time on your DataBroker display.
 ## Title-deDE: Broker: Zeit
-## Notes-deDE: Zeigt die Zeit. Klick, um den Kalender zu öffnen.
+## Notes-deDE: Zeigt nur die Zeit auf der DataBroker-Anzeige.
 ## Title-esES: Broker: Hora
-## Notes-esES: Muestra la hora. Clic para abrir el calendario.
+## Notes-esES: Sólo muestra la hora en el display DataBroker.
 ## Title-esMX: Broker: Hora
-## Notes-esMX: Muestra la hora. Clic para abrir el calendario.
+## Notes-esMX: Sólo muestra la hora en el display DataBroker.
 ## Title-frFR: Broker: Heure
 ## Title-itIT: Broker: Ora
 ## Title-ptBR: Broker: Hora
@@ -19,7 +19,7 @@
 ## Author: Phanx
 ## X-Email: addons@phanx.net
 ## X-Copyright: Copyright (c) 2014 Phanx. All rights reserved.
-## X-License: See the accompanying LICENSE file for details.
+## X-Website: https://github.com/Phanx/Broker_Time
 
 Libs\LibStub\LibStub.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
