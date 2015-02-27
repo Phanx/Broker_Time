@@ -1,4 +1,4 @@
-## Interface: 60000
+## Interface: 60100
 
 ## Title: Broker: Time
 ## Notes: Just shows the time on your DataBroker display.
@@ -18,7 +18,7 @@
 
 ## Author: Phanx
 ## X-Email: addons@phanx.net
-## X-Copyright: Copyright (c) 2014 Phanx. All rights reserved.
+## X-Copyright: Copyright (c) 2014-2015 Phanx. All rights reserved.
 ## X-Website: https://github.com/Phanx/Broker_Time
 
 Libs\LibStub\LibStub.lua

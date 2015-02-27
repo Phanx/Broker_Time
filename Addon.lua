@@ -1,7 +1,7 @@
 --[[--------------------------------------------------------------------
 	Broker_Time
 	Shows the time. Hover for the date. Click to open the calendar.
-	Copyright (c) 2014 Phanx <addons@phanx.net>. All rights reserved.
+	Copyright (c) 2014-2015 Phanx <addons@phanx.net>. All rights reserved.
 	https://github.com/Phanx/Broker_Time
 ----------------------------------------------------------------------]]
 
