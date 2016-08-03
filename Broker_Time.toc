@@ -1,24 +1,14 @@
-## Interface: 60100
+## Interface: 70000
 
 ## Title: Broker: Time
 ## Notes: Just shows the time on your DataBroker display.
-## Title-deDE: Broker: Zeit
 ## Notes-deDE: Zeigt nur die Zeit auf der DataBroker-Anzeige.
-## Title-esES: Broker: Hora
 ## Notes-esES: Sólo muestra la hora en el display DataBroker.
-## Title-esMX: Broker: Hora
 ## Notes-esMX: Sólo muestra la hora en el display DataBroker.
-## Title-frFR: Broker: Heure
-## Title-itIT: Broker: Ora
-## Title-ptBR: Broker: Hora
-## Title-ruRU: Broker: Время
-## Title-koKR: Broker: 시간
-## Title-zhCN: Broker: 时间
-## Title-zhTW: Broker: 時候
 
 ## Author: Phanx
 ## X-Email: addons@phanx.net
-## X-Copyright: Copyright (c) 2014-2015 Phanx. All rights reserved.
+## X-Copyright: Copyright (c) 2014-2016 Phanx. All rights reserved.
 ## X-Website: https://github.com/Phanx/Broker_Time
 
 Libs\LibStub\LibStub.lua
